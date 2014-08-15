@@ -12,5 +12,7 @@
  * @author patricklobo
  */
 class UsuarioBD {
-    //put your code here
+    public function Salvar(){
+        
+    }
 }
