@@ -1,5 +1,5 @@
 
-Todas as Classes terão classe.php e classeBD.php
+Quase todas as Classes terão classe.php e classeBD.php
 Crie e teste todas as classeBD, eu ja criei as classes.php, tem algumas herança, o PHP não suporta sobrecarga de metodo
 mas nao vejo isso como um problema.
 
