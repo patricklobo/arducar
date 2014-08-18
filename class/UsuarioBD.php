@@ -1,40 +1,50 @@
 <?php
+//carrega todas as classes do diretorio "class" (apenas os que ainda não foram carregados, utilizando o "require_once") 
+foreach (glob("*.php") as $filename) {
+    require_once $filename;
+}
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of UsuarioBD
- *
- * @author patricklobo
- */
 class UsuarioBD {
-    private $id;
-    private $nome;
-    
-    public function getId() {
-        return $this->id;
+
+    private $conexao;
+    private $usuario;
+    private $vetUsuario;
+    private $sql = null;
+    private $msg = null;
+
+    function __construct() {
+        $this->conexao = new Conexao ();
+        $this->conexao->conectar();
     }
 
-    public function getNome() {
-        return $this->nome;
+    //retorna um vetor de objetos, contendo todos os objetos usuarios do banco.
+    public function getUsuario() {
     }
 
-    public function setId($id) {
-        $this->id = $id;
-    }
-
-    public function setNome($nome) {
-        $this->nome = $nome;
-    }
-    public function Salvar(){
-        
+    //retorna um objeto usuario pelo ID
+    public function getUsuarioUni($idusuario) {
     }
     
+    //insere, atualiza e deleta um registro no banco.
+    public function setUsuario($operacao, $usuario) {
+        switch ($operacao) {
+            case 'I' :
+                
+                break;
+
+            case 'A' :
 
 
-    
+                break;
+
+            case 'D' :
+
+
+                break;
+
+            default :
+                break;
+        }
+    }
+
 }
